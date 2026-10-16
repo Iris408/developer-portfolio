@@ -1,0 +1,48 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
+---
+
+<MainLayout
+  title="Page not found | Ashleigh Magloire"
+  description="The page you were looking for could not be found."
+>
+  <Navbar client:load />
+
+  <main class="min-h-screen bg-[var(--portfolio-bg)] text-[var(--portfolio-ink)]">
+    <section class="px-6 py-12 md:px-10 md:py-16 xl:px-16">
+      <div class="max-w-3xl">
+        <p class="text-xs font-medium uppercase tracking-[0.3em] text-[var(--portfolio-accent)]">
+          404
+        </p>
+
+        <h1 class="mt-5 font-serif text-4xl leading-tight md:text-5xl xl:text-6xl">
+          Page not found
+        </h1>
+
+        <p class="mt-6 text-base leading-8 text-[var(--portfolio-muted)]">
+          The page you were looking for doesn't exist or may have moved.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-[var(--portfolio-line)] pt-6">
+          <a
+            href="/"
+            class="inline-flex items-center gap-2 bg-[var(--portfolio-accent)] px-5 py-3 text-sm text-[var(--portfolio-bg)] transition hover:opacity-85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--portfolio-accent)]"
+          >
+            Back to the homepage <span aria-hidden="true">→</span>
+          </a>
+
+          <a
+            href="/projects"
+            class="text-sm text-[var(--portfolio-ink)] underline decoration-[var(--portfolio-line)] underline-offset-4 transition hover:decoration-[var(--portfolio-accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--portfolio-accent)]"
+          >
+            View my projects <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</MainLayout>

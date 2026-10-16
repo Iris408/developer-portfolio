@@ -55,7 +55,7 @@ const socialLinks = [
   },
   {
     label: "Email",
-    href: "mailto:ashmagloire45@icloud.com",
+    href: "mailto:contact@irisoak.dev",
     icon: EmailIcon,
   },
 ];
@@ -95,6 +95,12 @@ export default function Footer() {
 
         <div className="text-xs leading-6 text-[var(--portfolio-muted)] sm:text-right">
           <p>© 2026 Ashleigh Magloire.</p>
+          <a
+            href="/privacy"
+            className="underline decoration-[var(--portfolio-line)] underline-offset-4 transition hover:text-[var(--portfolio-ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--portfolio-accent)]"
+          >
+            Privacy
+          </a>
         </div>
       </div>
     </footer>

@@ -41,7 +41,7 @@ export default function Contact() {
 
           <div className="mt-10 flex flex-col gap-8 sm:flex-row">
             <a
-              href="mailto:ashmagloire45@icloud.com"
+              href="mailto:contact@irisoak.dev"
               className="inline-flex items-center justify-center gap-2 bg-[#F7F6F1] px-8 py-4 text-sm font-medium text-[#26372D] transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               Send me an email

@@ -1,4 +1,44 @@
 export const theBuildRoomNotes = [
+  {
+    id: "BR-012",
+    title: "Verifying an OpenAPI security fix",
+    project: "PartsPilot v3",
+    category: "Backend / API Security / Testing",
+    tags: ["Backend", "Security", "Testing", "OpenAPI"],
+    date: "2026-10-18",
+    status: "Fixed / Learned",
+    pinned: false,
+    summary:
+      "Verified an OpenAPI security fix on the separate PartsPilot v3 branch against the existing tests and endpoint regression checks.",
+    problem:
+      "The OpenAPI security fix needed to be checked against existing endpoint behaviour.",
+    cause:
+      "A security-related change can risk introducing regressions elsewhere in the API.",
+    fix:
+      "Verified the fix on the separate v3 branch; all 70 tests and 55 endpoint regression checks passed. The change has been committed and pushed, but hasn’t been merged into main.",
+    lesson:
+      "Check security changes against the broader API regression suite.",
+  },
+  {
+    id: "BR-011",
+    title: "From interaction modes to app structure",
+    project: "Bloom v3",
+    category: "Product / Information Architecture / Routing",
+    tags: ["Information Architecture", "Routing", "QA"],
+    date: "2026-10-16",
+    status: "Learned",
+    pinned: false,
+    summary:
+      "Locked Bloom’s interaction mode specification and mapped it into the app’s information architecture and routes.",
+    problem:
+      "Bloom’s modes needed to be reflected in the app’s information architecture and routes.",
+    cause:
+      "The mode specification needed to be settled before the route structure could be finalised.",
+    fix:
+      "Completed and locked the mode specification, mapped it into the information architecture and routes, then QA-checked the routes.",
+    lesson:
+      "Define the experience modes before finalising routes, so the app’s structure follows the intended experience.",
+  },
     {
     id: "BR-010",
     title: "Keeping .NET Build Output Out of Git",
@@ -197,7 +237,7 @@ export const theBuildRoomNotes = [
   {
     id: "BR-002",
     title: "Fixing an Astro Build Hang",
-    project: "Portfolio Website",
+    project: "Developer Portfolio",
     category: "Frontend / Astro / Build Tools",
     tags: ["Frontend", "Astro", "Build Tools"],
     date: "2026-07-05",

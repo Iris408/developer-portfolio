@@ -95,6 +95,7 @@ const categories = [
     items: sortedNotes,
     href: "/the-build-room/notes",
     itemLabel: "notes",
+    previewLimit: 4,
   },
 ];
 
@@ -159,9 +160,9 @@ function BuildCard({ build }) {
   );
 }
 
-function NoteCard({ note }) {
+function NoteCard({ note, className = "" }) {
   return (
-    <article className="rounded-xl border border-[var(--portfolio-line)] bg-[var(--portfolio-surface)] p-5 transition hover:border-[var(--portfolio-accent)] md:p-6">
+    <article className={`${className} rounded-xl border border-[var(--portfolio-line)] bg-[var(--portfolio-surface)] p-5 transition hover:border-[var(--portfolio-accent)] md:p-6`}>
       <div className="flex flex-wrap items-center justify-between gap-3">
         <time
           dateTime={note.date}
@@ -185,7 +186,7 @@ function NoteCard({ note }) {
 
 function CategoryPreview({ category }) {
   const count = category.items.length;
-  const previewItems = category.items.slice(0, 3);
+  const previewItems = category.items.slice(0, category.previewLimit ?? 3);
   const itemLabel =
     count === 1
       ? category.itemLabel.replace(/s$/, "")
@@ -218,7 +219,13 @@ function CategoryPreview({ category }) {
 
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {category.id === "notes"
-          ? previewItems.map((note) => <NoteCard key={note.id} note={note} />)
+          ? previewItems.map((note, index) => (
+              <NoteCard
+                key={note.id}
+                note={note}
+                className={index === 3 ? "hidden sm:block xl:hidden" : ""}
+              />
+            ))
           : previewItems.map((build) => (
               <BuildCard key={build.project} build={build} />
             ))}

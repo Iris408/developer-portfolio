@@ -89,14 +89,13 @@ import Footer from "../components/Footer.jsx";
               id="about-title"
               class="mt-5 max-w-4xl font-serif text-4xl leading-tight md:text-5xl xl:text-6xl"
             >
-              Systems thinking.<br />
-              People-first engineering.
+              Systems that work.<br />
+              Software people trust.
             </h1>
 
             <p class="mt-6 max-w-4xl text-base leading-8 text-[var(--portfolio-muted)]">
-              I'm a backend-focused full-stack developer with a background in automotive
-              technology and operations, where I saw how much depends on systems working
-              reliably behind the scenes. I also run
+              I’m a backend-focused full-stack developer with a background in automotive operations, 
+              where I learned that everything people see depends on systems they don’t. I also run
               <a
                 href="https://irisoak.dev"
                 target="_blank"
@@ -107,7 +106,7 @@ import Footer from "../components/Footer.jsx";
             </p>
           </section>
 
-          <!-- What I bring -->
+                    <!-- What I bring -->
           <section
             class="mt-10 border-t border-[var(--portfolio-line)] pt-5"
             aria-labelledby="strengths-title"
@@ -120,33 +119,45 @@ import Footer from "../components/Footer.jsx";
             </h2>
 
             <div class="border-t border-[var(--portfolio-line)]">
-              <article class="grid gap-3 border-b border-[var(--portfolio-line)] py-4 sm:grid-cols-[3rem_minmax(10rem,0.8fr)_minmax(0,1.5fr)] sm:items-center sm:gap-5">
-                <span class="grid h-10 w-10 place-items-center rounded-full bg-[var(--portfolio-surface-soft)] font-mono text-xs text-[var(--portfolio-accent)]" aria-hidden="true">
+              <article class="grid gap-3 border-b border-[var(--portfolio-line)] py-4 sm:grid-cols-[3rem_minmax(0,0.55fr)_minmax(0,1fr)] sm:items-center sm:gap-5">
+                <span
+                  class="grid h-10 w-10 place-items-center rounded-full bg-[var(--portfolio-surface-soft)] font-mono text-xs text-[var(--portfolio-accent)]"
+                  aria-hidden="true"
+                >
                   01
                 </span>
                 <h3 class="text-sm font-medium">Operational perspective</h3>
-                <p class="text-sm leading-6 text-[var(--portfolio-muted)]">
-                    My automotive and operations experience helps me understand the workflows and people behind a software requirement.
+                <p class="max-w-2xl text-sm leading-6 text-[var(--portfolio-ink)]">
+                  Years in automotive operations taught me to understand the
+                  people and workflows a system has to serve before building it.
                 </p>
               </article>
 
-              <article class="grid gap-3 border-b border-[var(--portfolio-line)] py-4 sm:grid-cols-[3rem_minmax(10rem,0.8fr)_minmax(0,1.5fr)] sm:items-center sm:gap-5">
-                <span class="grid h-10 w-10 place-items-center rounded-full bg-[var(--portfolio-surface-soft)] font-mono text-xs text-[var(--portfolio-accent)]" aria-hidden="true">
+              <article class="grid gap-3 border-b border-[var(--portfolio-line)] py-4 sm:grid-cols-[3rem_minmax(0,0.55fr)_minmax(0,1fr)] sm:items-center sm:gap-5">
+                <span
+                  class="grid h-10 w-10 place-items-center rounded-full bg-[var(--portfolio-surface-soft)] font-mono text-xs text-[var(--portfolio-accent)]"
+                  aria-hidden="true"
+                >
                   02
                 </span>
                 <h3 class="text-sm font-medium">End-to-end thinking</h3>
-                <p class="text-sm leading-6 text-[var(--portfolio-muted)]">
-                  I work across APIs, data models and React interfaces, following how information moves from the backend to the user.
+                <p class="max-w-2xl text-sm leading-6 text-[var(--portfolio-ink)]">
+                  I consider how a change affects the full system, from the user
+                  interface and API to data and deployment.
                 </p>
               </article>
 
-              <article class="grid gap-3 border-b border-[var(--portfolio-line)] py-4 sm:grid-cols-[3rem_minmax(10rem,0.8fr)_minmax(0,1.5fr)] sm:items-center sm:gap-5">
-                <span class="grid h-10 w-10 place-items-center rounded-full bg-[var(--portfolio-surface-soft)] font-mono text-xs text-[var(--portfolio-accent)]" aria-hidden="true">
+              <article class="grid gap-3 border-b border-[var(--portfolio-line)] py-4 last:border-b-0 sm:grid-cols-[3rem_minmax(0,0.55fr)_minmax(0,1fr)] sm:items-center sm:gap-5">
+                <span
+                  class="grid h-10 w-10 place-items-center rounded-full bg-[var(--portfolio-surface-soft)] font-mono text-xs text-[var(--portfolio-accent)]"
+                  aria-hidden="true"
+                >
                   03
                 </span>
                 <h3 class="text-sm font-medium">Methodical problem-solving</h3>
-                <p class="text-sm leading-6 text-[var(--portfolio-muted)]">
-                  I trace issues across the frontend, API, database and environment, then verify and document the fix.
+                <p class="max-w-2xl text-sm leading-6 text-[var(--portfolio-ink)]">
+                  I reproduce the issue, narrow down its cause, test the fix and
+                  record what changed.
                 </p>
               </article>
             </div>
@@ -164,34 +175,68 @@ import Footer from "../components/Footer.jsx";
               Toolkit
             </h2>
 
-            <ul class="mt-5 flex flex-wrap gap-2">
-              {
-                [
-                  "Python",
-                  "FastAPI",
-                  "PostgreSQL",
-                  "SQLAlchemy",
-                  "Pytest",
-                  "React",
-                  "TypeScript",
-                  "Docker",
-                  "GitHub Actions",
-                ].map((skill) => (
-                  <li class="rounded-full border border-[var(--portfolio-line)] px-3.5 py-2 text-sm text-[var(--portfolio-ink)]">
-                    {skill}
-                  </li>
-                ))
-              }
-            </ul>
+            <div class="mt-5 space-y-5">
+              <div>
+                <h3 class="text-sm font-medium">Backend</h3>
+                <ul class="mt-2 flex flex-wrap gap-2">
+                  {
+                    ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "Pytest"].map(
+                      (skill) => (
+                        <li class="rounded-full border border-[var(--portfolio-line)] px-3.5 py-2 text-sm text-[var(--portfolio-ink)] transition-[background-color,border-color,transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-[var(--portfolio-accent)] hover:bg-[var(--portfolio-surface-soft)] hover:shadow-sm motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+                          {skill}
+                        </li>
+                      ),
+                    )
+                  }
+                </ul>
+              </div>
 
-            <p class="mt-4 text-sm text-[var(--portfolio-muted-soft)]">
-              Currently exploring <strong>C#</strong> and <strong>.NET</strong> by migrating 
+              <div>
+                <h3 class="text-sm font-medium">Frontend</h3>
+                <ul class="mt-2 flex flex-wrap gap-2">
+                  {
+                    ["React", "TypeScript", "Tailwind CSS", "Astro"].map(
+                      (skill) => (
+                        <li class="rounded-full border border-[var(--portfolio-line)] px-3.5 py-2 text-sm text-[var(--portfolio-ink)] transition-[background-color,border-color,transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-[var(--portfolio-accent)] hover:bg-[var(--portfolio-surface-soft)] hover:shadow-sm motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+                          {skill}
+                        </li>
+                      ),
+                    )
+                  }
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-sm font-medium">DevOps &amp; Observability</h3>
+                <ul class="mt-2 flex flex-wrap gap-2">
+                  {
+                    [
+                      "Docker",
+                      "GitHub Actions",
+                      "Prometheus",
+                      "Grafana",
+                    ].map((skill) => (
+                      <li class="rounded-full border border-[var(--portfolio-line)] px-3.5 py-2 text-sm text-[var(--portfolio-ink)] transition-[background-color,border-color,transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-[var(--portfolio-accent)] hover:bg-[var(--portfolio-surface-soft)] hover:shadow-sm motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+                        {skill}
+                      </li>
+                    ))
+                  }
+                </ul>
+              </div>
+            </div>
+
+            <p class="mt-5 text-sm leading-6 text-[var(--portfolio-ink)]">
+              Currently exploring <strong>C#</strong> and <strong>.NET</strong>{" "}
+              by migrating
               <a
                 href="https://partspilot.uk"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-[var(--portfolio-ink)] underline decoration-transparent underline-offset-4 transition-colors hover:decoration-[var(--portfolio-accent)] focus-visible:decoration-[var(--portfolio-accent)]"
-              > PartsPilot</a> to a new backend.
+                class="ml-1 text-[var(--portfolio-ink)] underline decoration-[var(--portfolio-accent)] underline-offset-4 transition-colors hover:decoration-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--portfolio-accent)]"
+              >
+                PartsPilot
+              </a>{" "}
+              to a new backend.
             </p>
           </section>
 
